@@ -1,0 +1,99 @@
+{% load staticfiles %}
+
+<aside class="col-lg-4 col-md-5 col-sm-6">
+    <!-- Aside Search Bar -->
+    <div class="search-bar-holder">
+        <div class="search-bar">
+            <input type="text" class="form-control"  placeholder="Search" >
+            <button type="submit">
+                <span class="fa fa-paper-plane"></span>
+            </button>
+        </div>
+    </div>
+    <!-- Aside Search Bar -->
+
+    <!-- Admin/Owner Info (Bio - About) -->
+    <div class="aside-widget">
+        <h3>About Me</h3>
+        <div class="aside-admin-detail">
+            <span class="admin-img"><img src="{% static 'images/admin-img/img-01.jpg' %}" alt="img-01"></span>
+            <p>Donec semper, ex et sollicitudin dignissim, massa quam hendrerit magna, a consequat urna lectus posuere nisl. Vivamus tincidunt sagittis massa, quis consectetur ex eleifend vitae.</p>
+            <span class="arthor-name">Abdulbasit Mamman</span>
+            <span class="arthor-signature">Abdulbasit mamman</span>
+        </div>
+    </div>
+    <!-- end Admin Info -->
+
+    <!-- Categories -->
+    <div class="aside-widget">
+        <h3>Categories</h3>
+        <div class="categories-list">
+            <ul>
+                {% if categories %}
+                    {% for category in categories %}
+                        <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                    {% endfor %}
+                {% else %}
+                    <li><a href="#">Category Empty</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <!-- end Categories -->
+
+    <!-- Recent Post -->
+    <div class="aside-widget">
+        <h3>Recent Posts</h3>
+        {% if posts %}
+            <div class="recent-post">
+                <ul>
+                    {% for post in posts %}
+                        {% if post.published == True %}
+                            <li>
+                                <span class="recent-post-img"><img src="{{ MEDIA_URL }}{{ post.post_image.url }}" width="70" height="80" alt="img-01"></span>
+                                <div class="recent-post-detail">
+                                    <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
+                                    <span class="recent-post-date"><i class="fa fa-clock-o"></i>{{ post.date }}</span>
+                                    <span class="recent-post-date"><i class="fa fa-tag"></i>{{ post.category }}</span>
+                                    <span class="recent-post-date"><i class="fa fa-comment"></i>{{ post.comments.count }}</span>
+                                </div>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <!-- no post to show category for -->
+            <div class="recent-post">
+                <ul>
+                    <li>
+                        <span class="recent-post-img"><img src="{% static 'images/aside-recent-post/img-01.jpg' %}" alt="img-01"></span>
+                        <div class="recent-post-detail">
+                            <h5><a href="#">No Post Currently</a></h5>
+                            <span class="recent-post-date"><i class="fa fa-clock-o"></i>Check back later</span>
+                            <p>There are no post currently, please check back later</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+    <!-- end Recent Post -->
+
+    <!-- Tags (used categories for now) -->
+    <div class="aside-widget">
+        <h3>Tags</h3>
+        <div class="tags-list">
+            <ul>
+                {% if categories %}
+                    {% for category in categories %}
+                        <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                    {% endfor %}
+                {% else %}
+                    <li><a href="#">Category Empty</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <!-- end Tags -->
+</aside>

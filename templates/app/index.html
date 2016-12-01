@@ -1,0 +1,756 @@
+{% extends 'baseindex.html' %}
+{% load staticfiles %}
+	
+<!-- Header -->
+{% block header %}
+{% include 'mainheader.html' %}
+{% endblock %}
+<!-- Header -->
+
+<!-- Banner & Enquiry Form -->
+{% block banner %}
+<div class="banner">
+	
+	<!-- Banner slider -->
+	<div id="banner-slider" class="banner-slider">
+			
+		<!-- item -->
+		<div class="slide overlay-dark fullscreen" style="background: url({% static 'images/banner/img-01.jpg' %}); background-size: cover;">
+			<div class="caption-holder">
+				<div class="tc-display-table">
+					<div class="tc-display-table-cell">
+						<div class="banner-text animate fadeInUp" data-wow-delay="0.4s">
+							<h1>Back to School<span>Education is the movement from darkness to light</span></h1>
+							<p>Vivamus tempor felis at nulla dapibus cursus. Donec pretium nulla eu lobortis efficitur. 
+							<span>Quisquefeugiat, orci investibulum porta, metus lacus molestie mauris.</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- item -->
+
+		<!-- item -->
+		<div class="slide overlay-dark fullscreen" style="background: url({% static 'images/banner/img-02.jpg' %}); background-size: cover;">
+			<div class="caption-holder">
+				<div class="tc-display-table">
+					<div class="tc-display-table-cell">
+						<div class="banner-text animate fadeInUp" data-wow-delay="0.4s">
+							<h1>Back to School<span>Education is the movement from darkness to light</span></h1>
+							<p>Vivamus tempor felis at nulla dapibus cursus. Donec pretium nulla eu lobortis efficitur. 
+							<span>Quisquefeugiat, orci investibulum porta, metus lacus molestie mauris.</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- item -->
+
+	</div>
+	<!-- Banner slider -->
+
+	<!-- Enquiry Form -->
+	<div class="enquiry-form-holder">
+		<div class="container">
+			<div class="form-btn-holder">
+				<div class="bars-icon hide-md"><span>Enquiry</span></div>
+				<span class="bars-icon appear-lg" data-toggle="modal" data-target=".bs-example-modal-sm"></span>
+			</div>
+			<form class="enquiry-form hide-md">
+				<div class="enquiry-form-input">
+					<input type="text" class="form-control" placeholder="full name">
+				</div>
+				<div class="enquiry-form-input">
+					<input type="text" class="form-control" placeholder="email id">
+				</div>
+				<div class="enquiry-form-input">
+					<input type="text" class="form-control" placeholder="class">
+				</div>
+				<div class="enquiry-form-input">
+					<input type="text" class="form-control" placeholder="subject">
+				</div>
+				<div class="enquiry-form-input">
+					<button class="white-btn" type="submit">submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Enquiry Form -->
+
+</div>
+{% endblock %}
+<!-- Banner & Enquiry Form -->
+
+<!-- Main Content -->
+{% block main %}
+<main class="main-content">
+	
+	<!-- Services Section -->
+	<section class="services-holder section-padding">
+		<div class="container">
+
+			<!-- Main Heading -->
+			<div class="main-heading-holder">
+				<div class="main-heading">
+					<h2>Our <strong>School</strong> Services<span>our best services for your children</span></h2>
+					<p>Vivamus tempor felis at nulla dapibus cursus. Donec pretium nulla eu lobortis efficitur.
+					<span>Quisquefeugiat, orci investibulum porta, metus lacus molestie mauris.</span></p>
+				</div>
+			</div>
+			<!-- Main Heading -->
+
+			<!-- Services -->
+			<div class="services">
+				<div id="services-slider" class="services-slider">
+				
+					<!-- Services Figure -->
+					<div class="item">
+						<figure class="service-figure">
+							<img src="images/service-bg/img-01.jpg" alt="img-01">
+							<figcaption class="service-caption">
+								<span class="service-icon"><i class="icon-man-with-tie"></i></span>
+								<h3>Experience Teacher</h3>
+								<p>In tempor, ex id viverra convallis, ante augue vestibulum leo, eget elementum risus nulla bibendum nisl. Maecenas lacinia libero.</p>
+								<a class="read-more" href="#">Read More</a>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Services Figure -->
+
+					<!-- Services Figure -->
+					<div class="item">
+						<figure class="service-figure">
+							<img src="images/service-bg/img-01.jpg" alt="img-01">
+							<figcaption class="service-caption">
+								<span class="service-icon"><i class="icon-college-studying"></i></span>
+								<h3>All Courses Available</h3>
+								<p>In tempor, ex id viverra convallis, ante augue vestibulum leo, eget elementum risus nulla bibendum nisl. Maecenas lacinia libero.</p>
+								<a class="read-more" href="#">Read More</a>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Services Figure -->
+
+					<!-- Services Figure -->
+					<div class="item">
+						<figure class="service-figure">
+							<img src="images/service-bg/img-01.jpg" alt="img-01">
+							<figcaption class="service-caption">
+								<span class="service-icon"><i class="icon-swimming-figure"></i></span>
+								<h3>other activities</h3>
+								<p>In tempor, ex id viverra convallis, ante augue vestibulum leo, eget elementum risus nulla bibendum nisl. Maecenas lacinia libero.</p>
+								<a class="read-more" href="#">Read More</a>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Services Figure -->
+
+				</div>
+			</div>
+			<!-- Services -->
+
+		</div>
+	</section>
+	<!-- Services Section -->
+
+	<!-- About The School -->
+	<section class="about-school">
+		<div class="container">
+			<div class="row">
+				
+				<!-- About Img Section -->
+				<div class="col-sm-5">
+					<figure class="about-sec-img">
+						<img class="animate fadeInLeft" data-wow-delay="0.5s" src="images/about-sec-img.png" alt="about-sec">
+					</figure>
+				</div>
+				<!-- About Img Section -->
+
+				<!-- About To School -->
+				<div class="col-sm-7">
+					<div class="about-sec section-padding-top">
+						<h2>About <strong>Our School</strong><span>Lorem ipsum dolor sit amet</span></h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar tellus sed mauvehicula tempor. In hac habitasse platea dictumst. Donec nunc nunc, interdum sed aliquet quis, conditum vitae enim. Quisque molestie consectetur urna quis scelerisque. Morbi at lectus sapien. Donec fgiat arcu in mi placerat ullamcorper.</p>
+						<p>In tempor, ex id viverra convallis, ante augue vestibulum leo, eget elementum risus nulla bibendum nisl. Maecenas lacinia libero tincidunt justo bibendum sagittis. Duis gravida massa ac vehicula pulvinar. Nunc ligula orci, vulputate id tempor ac, tincidunt in orci. Etiam nulla lectus, commodo quis tortor et, congue volutpat velit.</p>
+						<a class="pink-btn" href="#">read more</a>
+					</div>
+				</div>
+				<!-- About To School -->
+
+			</div>
+		</div>
+	</section>
+	<!-- About The School -->
+
+	<!-- Upcoming Events -->
+	<section class="upcoming-events-holder parallax-window section-padding overlay-dark" data-image-src="images/event-bg.jpg" data-parallax="scroll">
+		<div class="container">
+				
+			<!-- Main Heading -->
+			<div class="main-heading-holder">
+				<div class="main-heading white-heading">
+					<h2>Upcoming Events<span>Nunc posuere malesuada vulputate</span></h2>
+				</div>
+			</div>
+			<!-- Main Heading -->
+
+			<!-- Upcoming Events Slider -->
+			<div class="upcoming-events">
+				<div class="row">
+						
+					<!-- Events Post -->
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 r-full-width">
+						<div class="post-holder">
+							<div class="row no-gutters">
+								
+								<!-- Post Img -->
+								<div class="col-lg-6 col-sm-12 col-xs-12 r-full-width">
+									<figure class="post-img">
+										<img src="images/upcomming-events/img-01.jpg" alt="img-01">
+									</figure>
+								</div>
+								<!-- Post Img -->
+
+								<!-- Post Detail -->
+								<div class="col-lg-6 col-sm-12 col-xs-12 r-full-width">
+									<div class="post-detail">
+										<h3><a href="#">Event Title Name</a></h3>
+										<ul class="loaction-tags">
+											<li><i class="fa fa-map-marker"></i>King Street, Melbourne VIC 3000</li>
+											<li><i class="fa fa-clock-o"></i>10:30 am To 8:00 pm</li>
+										</ul>
+										<p>Lorem ipsum dolor sit amet, contetur adipiscing elit. Sed id tellus in diam tempus euismod.</p>
+										<a href="#" class="read-more">Read More</a>
+										<ul id="countdown-1" class="countdown">
+										  	<li><span class="days">00</span><p>Day</p></li>
+											<li><span class="hours">00</span><p>Hour</p></li>
+											<li><span class="minutes">00</span><p>min</p></li>
+											<li><span class="seconds">00</span><p>sec</p></li>
+										</ul>
+									</div>
+								</div>
+								<!-- Post Detail -->
+
+							</div>
+							<strong class="date-batch-left">28<span>DEC</span></strong>
+						</div>
+					</div>
+					<!-- Events Post -->
+
+					<!-- Events Post -->
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 r-full-width">
+						<div class="post-holder">
+							<div class="row no-gutters">
+								
+								<!-- Post Img -->
+								<div class="col-lg-6 col-xs-12 r-full-width">
+									<figure class="post-img">
+										<img src="images/upcomming-events/img-02.jpg" alt="img-02">
+									</figure>
+								</div>
+								<!-- Post Img -->
+
+								<!-- Post Detail -->
+								<div class="col-lg-6 col-xs-12 r-full-width">
+									<div class="post-detail">
+										<h3><a href="#">Event Title Name</a></h3>
+										<ul class="loaction-tags">
+											<li><i class="fa fa-map-marker"></i>King Street, Melbourne VIC 3000</li>
+											<li><i class="fa fa-clock-o"></i>10:30 am To 8:00 pm</li>
+										</ul>
+										<p>Lorem ipsum dolor sit amet, contetur adipiscing elit. Sed id tellus in diam tempus euismod.</p>
+										<a href="#" class="read-more">Read More</a>
+										<ul id="countdown-2" class="countdown">
+										  	<li><span class="days">00</span><p>Day</p></li>
+											<li><span class="hours">00</span><p>Hour</p></li>
+											<li><span class="minutes">00</span><p>min</p></li>
+											<li><span class="seconds">00</span><p>sec</p></li>
+										</ul>
+									</div>
+								</div>
+								<!-- Post Detail -->
+
+							</div>
+							<strong class="date-batch-right">28<span>DEC</span></strong>
+						</div>
+					</div>
+					<!-- Events Post -->
+
+				</div>
+			</div>
+			<!-- Upcoming Events Slider -->
+
+		</div>
+	</section>
+	<!-- Upcoming Events -->
+
+	<!-- Team Section -->
+	<section class="team-holder section-padding-top white-bg">
+		<div class="container">
+
+			<!-- Main Heading -->
+			<div class="main-heading-holder">
+				<div class="main-heading">
+					<h2>Our <strong>School</strong> Team<span>our best services for your children</span></h2>
+					<p>Vivamus tempor felis at nulla dapibus cursus. Donec pretium nulla eu lobortis efficitur.
+					<span>Quisquefeugiat, orci investibulum porta, metus lacus molestie mauris.</span></p>
+				</div>
+			</div>
+			<!-- Main Heading -->
+
+			<!-- Team Slider -->
+			<div id="team-slider" class="team-slider">
+				
+				<!-- Team Figure -->
+				<div class="item">
+					<figure class="team-figure">
+						<img src="images/teams/img-01.png" alt="img-01">
+						<figcaption class="employee-detail">
+							<div class="tc-display-table">
+								<div class="tc-display-table-cell">
+									<div class="employee-desination">
+										<h5><a href="#">brenda shon</a></h5>
+										<span>Director</span>
+									</div>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<!-- Team Figure -->
+
+				<!-- Team Figure -->
+				<div class="item">
+					<figure class="team-figure">
+						<img src="images/teams/img-02.png" alt="img-02">
+						<figcaption class="employee-detail">
+							<div class="tc-display-table">
+								<div class="tc-display-table-cell">
+									<div class="employee-desination">
+										<h5><a href="#">brenda shon</a></h5>
+										<span>Director</span>
+									</div>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<!-- Team Figure -->
+
+				<!-- Team Figure -->
+				<div class="item">
+					<figure class="team-figure">
+						<img src="images/teams/img-03.png" alt="img-03">
+						<figcaption class="employee-detail">
+							<div class="tc-display-table">
+								<div class="tc-display-table-cell">
+									<div class="employee-desination">
+										<h5><a href="#">brenda shon</a></h5>
+										<span>Director</span>
+									</div>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<!-- Team Figure -->
+
+			</div>
+			<!-- Team Slider -->
+
+		</div>
+	</section>
+	<!-- Team Section -->
+
+	<!-- Counters -->
+	<section class="parallax-window section-padding overlay-pink" data-parallax="scroll" data-image-src="images/counter-bg.jpg">
+		<div class="container">
+			<div id="tc-counters" class="tc-counters">
+				<div class="tc-counter">
+					<strong id="odometer1" class="odometer"></strong>
+					<div class="tc-border-topcenter">
+						<h4>total students</h4>
+					</div>
+				</div>
+				<div class="tc-counter">
+					<strong id="odometer2" class="odometer"></strong>
+					<div class="tc-border-topcenter">
+						<h4>win awards</h4>
+					</div>
+				</div>
+				<div class="tc-counter">
+					<strong id="odometer3" class="odometer"></strong>
+					<div class="tc-border-topcenter">
+						<h4>total teachers</h4>
+					</div>
+				</div>
+				<div class="tc-counter">
+					<strong id="odometer4" class="odometer"></strong>
+					<div class="tc-border-topcenter">
+						<h4>total event</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- counters -->
+
+	<!-- Gallery Section -->
+	<section class="gallery-holder white-bg">
+
+		<!-- Main Heading -->
+		<div class="main-heading-holder section-padding-top">
+			<div class="main-heading">
+				<h2>School <strong>Products</strong><span>our best services for your children</span></h2>
+			</div>
+			<!-- Filter Tags List -->
+			<div class="filter-tags-holder">
+				<ul id="tg-filterbale-nav" class="option-set">
+					<li><a class="selected" data-filter="*" href="#">All</a></li>
+					<li><a data-filter=".books" href="#">School Books</a></li>
+					<li><a data-filter=".bags" href="#">School Bags</a></li>
+					<li><a data-filter=".uniform" href="#">School Uniform</a></li>
+					<li><a data-filter="*" href="#">others</a></li>
+				</ul>
+			</div>
+			<!-- Filter Tags List -->
+		</div>
+		<!-- Main Heading -->
+
+		<!-- Gallery Grid -->
+		<div class="container">	
+			<div class="row">
+				<div id="filter-masonry" class="gallery-masonry section-padding-top">		
+					<div class="masonry-grid col-sm-6 col-xs-6 uniform r-full-width">
+						<figure class="gallery-figure">
+							<img src="images/gallery/img-01.jpg" alt="img-01">
+							<figcaption class="gallery-hover">
+								<div class="tc-display-table">
+									<div class="tc-display-table-cell">
+										<a class="fa fa-search" href="images/gallery/img-01.jpg" data-rel="prettyPhoto[gallery]"></a>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="masonry-grid col-sm-6 col-xs-6 books r-full-width">
+						<figure class="gallery-figure">
+							<img src="images/gallery/img-02.jpg" alt="img-02">
+							<figcaption class="gallery-hover">
+								<div class="tc-display-table">
+									<div class="tc-display-table-cell">
+										<a class="fa fa-search" href="images/gallery/img-02.jpg" data-rel="prettyPhoto[gallery]"></a>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="masonry-grid col-sm-4 col-xs-6 bags r-full-width">
+						<figure class="gallery-figure">
+							<img src="images/gallery/img-03.jpg" alt="img-03">
+							<figcaption class="gallery-hover">
+								<div class="tc-display-table">
+									<div class="tc-display-table-cell">
+										<a class="fa fa-search" href="images/gallery/img-03.jpg" data-rel="prettyPhoto[gallery]"></a>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="masonry-grid col-sm-4 col-xs-6 books r-full-width">
+						<figure class="gallery-figure">
+							<img src="images/gallery/img-04.jpg" alt="img-04">
+							<figcaption class="gallery-hover">
+								<div class="tc-display-table">
+									<div class="tc-display-table-cell">
+										<a class="fa fa-search" href="images/gallery/img-04.jpg" data-rel="prettyPhoto[gallery]"></a>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="masonry-grid col-sm-4 col-xs-6 uniform r-full-width">
+						<figure class="gallery-figure">
+							<img src="images/gallery/img-05.jpg" alt="img-05">
+							<figcaption class="gallery-hover">
+								<div class="tc-display-table">
+									<div class="tc-display-table-cell">
+										<a class="fa fa-search" href="images/gallery/img-05.jpg" data-rel="prettyPhoto[gallery]"></a>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="view-all-btn">
+					<a class="pink-btn" href="#">view all</a>
+				</div>
+			</div>
+		</div>	
+		<!-- Gallery Grid -->
+		
+	</section>
+	<!-- Gallery Section -->
+
+	<!-- Video Section -->
+	<section class="parallax-window video-section overlay-dark" data-parallax="scroll" data-image-src="images/video-sec-bg.jpg">
+		<div class="video-title-holder">
+			<div class="video-titel">
+				<div class="youtube" id="lR4tJr7sMPM-1">
+					<div class="position-center-center">
+						<i class="play-btn fa fa-play"></i>
+						<h3>School Classroom Video</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Video Section -->
+
+	<!-- Our Blog -->
+	<section class="section-padding white-bg">
+		<div class="container">
+				
+			<!-- Main Heading -->
+			<div class="main-heading-holder">
+				<div class="main-heading">
+					<h2>Our <strong>School</strong> Blog<span>Nam sit amet commodo massa</span></h2>
+					<p>Vivamus tempor felis at nulla dapibus cursus. Donec pretium nulla eu lobortis efficitur.
+					<span>Quisquefeugiat, orci investibulum porta, metus lacus molestie mauris.</span></p>
+				</div>
+			</div>
+			<!-- Main Heading -->
+
+			<!-- Our Blogs -->
+			<div class="our-blogs">
+						
+				<!-- Img Post -->
+				<div class="blog-post-holder">
+					<div class="row no-gutters">
+						
+						<!-- Post Img -->
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<figure class="post-img">
+								<img src="images/our-blog/img-01.jpg" alt="img-01">
+								<strong class="title-batch-left"><i class="fa fa-image"></i></strong>
+							</figure>
+						</div>
+						<!-- Post Img -->
+
+						<!-- Post Detail -->
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="blog-post-detail">
+								<span class="admin-img-left"><img src="images/admin-img/img-01.jpg" alt="img-01"></span>
+								<h3>Autoplay image slider post</h3>
+								<ul class="meta-post">
+									<li><i class="fa fa-user"></i>My Admin</li>
+									<li><i class="fa fa-clock-o"></i>6 days ago</li>
+									<li><i class="fa fa-comment"></i>10 Comments</li>
+								</ul>
+								<p>Nunc ullamcorper augue nec accumsan porta. Ut lacinia fgiat 
+								viverra. Ut dictum sagittis finibus.</p>
+								<a class="pink-btn" href="#">read more</a>
+							</div>
+						</div>
+						<!-- Post Detail -->
+
+					</div>
+				</div>
+				<!-- Img Post -->
+
+				<!-- Slider Post -->
+				<div class="blog-post-holder">
+					<div class="row no-gutters">
+						
+						<!-- Post Img Slider -->
+						<div class="col-lg-6 col-md-6 col-sm-12 pull-right slider-pull-none">
+							<figure class="post-img">
+								<ul id="slider-post" class="slider-post">
+									<li><img src="images/our-blog/img-02.jpg" alt="img-02"></li>
+									<li><img src="images/our-blog/img-02.jpg" alt="img-02"></li>
+									<li><img src="images/our-blog/img-02.jpg" alt="img-02"></li>
+								</ul>
+							</figure>
+						</div>
+						<!-- Post Img Slider -->
+
+						<!-- Post Detail -->
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="blog-post-detail">
+								<span class="admin-img-right"><img src="images/admin-img/img-01.jpg" alt="img-01"></span>
+								<h3>Autoplay image slider post</h3>
+								<ul class="meta-post">
+									<li><i class="fa fa-user"></i>My Admin</li>
+									<li><i class="fa fa-clock-o"></i>6 days ago</li>
+									<li><i class="fa fa-comment"></i>10 Comments</li>
+								</ul>
+								<p>Nunc ullamcorper augue nec accumsan porta. Ut lacinia fgiat 
+								viverra. Ut dictum sagittis finibus.</p>
+								<a class="pink-btn" href="#">read more</a>
+							</div>
+						</div>
+						<!-- Post Detail -->
+
+					</div>
+				</div>
+				<!-- Slider Post -->
+
+				<!-- Video Post -->
+				<div class="blog-post-holder m-0">
+					<div class="row no-gutters">
+						
+						<!-- Post Video -->
+						<div class="col-sm-12">
+							<div class="post-img">
+								<strong class="title-batch-left"><i class="fa fa-video-camera"></i></strong>
+								<img src="images/our-blog/img-03.jpg" alt="img-03">
+								<div class="video-title-holder">
+									<div class="video-titel">
+										<div class="youtube" id="lR4tJr7sMPM-2">
+											<div class="position-center-center">
+												<i class="play-btn fa fa-play"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Post Video -->
+
+						<!-- Post Detail -->
+						<div class="col-sm-12">
+							<div class="blog-post-detail center-detail">
+								<div class="center-detail-inner">
+									<span class="admin-img-top"><img src="images/admin-img/img-01.jpg" alt="img-01"></span>
+									<h3>Autoplay image slider post</h3>
+									<div class="meta-post-holder">
+										<ul class="meta-post">
+											<li><i class="fa fa-user"></i>My Admin</li>
+											<li><i class="fa fa-clock-o"></i>6 days ago</li>
+											<li><i class="fa fa-comment"></i>10 Comments</li>
+										</ul>
+									</div>
+									<p>Nunc ullamcorper augue nec accumsan porta. Ut lacinia fgiat viverra. Ut dictum turpis in ipsum sagittis<span>finibus. Vestibulum ut molestie lectus, id tincidunt turpis.</span></p>
+									<a class="pink-btn" href="#">read more</a>
+								</div>
+							</div>
+						</div>
+						<!-- Post Detail -->
+
+					</div>
+				</div>
+				<!-- Video Post -->
+
+			</div>
+			<!-- Our Blogs -->
+
+		</div>
+	</section>
+	<!-- Our Blog -->
+
+	<!-- Our School Partner -->
+	<section class="parallax-window our-patner section-padding overlay-dark" data-parallax="scroll" data-image-src="images/our-patners-bg.jpg">
+		<div class="our-patners-holder">
+			<div class="container">
+				
+				<!-- Main Heading -->
+				<div class="main-heading-holder">
+					<div class="main-heading">
+						<h2>Our School <strong>Partner</strong><span>our best services for your children</span></h2>
+						<p>Vivamus tempor felis at nulla dapibus cursus. Donec pretium nulla eu lobortis efficitur.
+						<span>Quisquefeugiat, orci investibulum porta, metus lacus molestie mauris.</span></p>
+					</div>
+				</div>
+				<!-- Main Heading -->
+
+				<!-- Partners Bnard icons -->
+				<div class="Partners-icons">
+					<ul id="brand-icons-slider" class="brand-icons-slider">
+						<li><a href="#"><img src="images/brand-icons/img-01.png" alt="img-01"></a></li>
+						<li><a href="#"><img src="images/brand-icons/img-02.png" alt="img-02"></a></li>
+						<li><a href="#"><img src="images/brand-icons/img-03.png" alt="img-03"></a></li>
+						<li><a href="#"><img src="images/brand-icons/img-04.png" alt="img-04"></a></li>
+					</ul>
+				</div>
+				<!-- Partners Bnard icons -->
+
+			</div>
+		</div>
+	</section>
+	<!-- Our School Partner -->
+
+	<!-- Testimonial Section -->
+	<section class="testimonial-holder section-padding white-bg">
+		<div class="container">
+
+			<!-- Main Heading -->
+			<div class="main-heading-holder">
+				<div class="main-heading">
+					<h2>Parents <strong>Testimonials</strong><span>In gravida ultrices magna in rhoncu</span></h2>
+					<p>Vivamus tempor felis at nulla dapibus cursus. Donec pretium nulla eu lobortis efficitur.
+					<span>Quisquefeugiat, orci investibulum porta, metus lacus molestie mauris.</span></p>
+				</div>
+			</div>
+			<!-- Main Heading -->
+
+			<!-- Testimonial Slider -->
+			<div id="testimonial-slider" class="testimonial-slider">
+				
+				<!-- Testimonial column -->
+				<div class="item">
+					<div class="testimonial-column">
+						<div class="testimonial-blockquote-holder">
+							<blockquote class="testimonial-blockquote">
+								<p>Nunc ullamcorper augue nec accumsan porta. Ut lacinia fgiat viverra. Ut dictum turpis in ipsum sagittis finibus.</p>
+							</blockquote>
+							<span class="client-name">Wll Smith</span>
+						</div>
+						<div class="client-img">
+							<img src="images/client-img/img-01.jpg" alt="img-01">
+						</div>
+					</div>
+				</div>
+				<!-- Testimonial column -->
+
+				<!-- Testimonial column -->
+				<div class="item">
+					<div class="testimonial-column">
+						<div class="testimonial-blockquote-holder">
+							<blockquote class="testimonial-blockquote">
+								<p>Nunc ullamcorper augue nec accumsan porta. Ut lacinia fgiat viverra. Ut dictum turpis in ipsum sagittis finibus.</p>
+							</blockquote>
+							<span class="client-name">Wll Smith</span>
+						</div>
+						<div class="client-img">
+							<img src="images/client-img/img-01.jpg" alt="img-01">
+						</div>
+					</div>
+				</div>
+				<!-- Testimonial column -->
+
+				<!-- Testimonial column -->
+				<div class="item">
+					<div class="testimonial-column">
+						<div class="testimonial-blockquote-holder">
+							<blockquote class="testimonial-blockquote">
+								<p>Nunc ullamcorper augue nec accumsan porta. Ut lacinia fgiat viverra. Ut dictum turpis in ipsum sagittis finibus.</p>
+							</blockquote>
+							<span class="client-name">Wll Smith</span>
+						</div>
+						<div class="client-img">
+							<img src="images/client-img/img-01.jpg" alt="img-01">
+						</div>
+					</div>
+				</div>
+				<!-- Testimonial column -->
+
+			</div>
+			<!-- Testimonial Slider -->
+
+		</div>
+	</section>
+	<!-- Testimonial Section -->
+
+</main>
+{% endblock %}
+<!-- Main Content -->	

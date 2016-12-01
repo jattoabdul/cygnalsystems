@@ -1,0 +1,39 @@
+{%extend 'base.html' %}
+{% load staticfiles %}
+<!-- Header -->
+{% block header %}
+{% include 'header.html' %}
+{% endblock %}
+<!-- Header -->
+
+<!-- Banner Slider -->
+{% block banner %}
+
+{% endblock %}
+<!-- Banner Slider -->
+
+<!-- Main Content -->
+{% block main %}
+	<main class="main-content section-padding white-bg">
+
+		<!-- 404 Holder -->
+		<div class="container">
+			<div class="error-holder">
+				<div class="error-detail">
+					<img src="images/404-error.png" alt="404-error">
+					<h2>4<strong>0</strong>4</h2>
+					<p>Oops! The page you requested was not found!</p>
+					<div class="search-bar">
+	                    <input type="text" class="form-control"  placeholder="Search Here" >
+                        <button type="submit">
+                            <span class="fa fa-paper-plane-o"></span>
+                        </button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 404 Holder -->
+
+	</main>
+{% endblock %}
+<!-- Main Content -->

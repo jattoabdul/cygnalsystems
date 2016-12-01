@@ -1,0 +1,167 @@
+{%extends 'base.html' %}
+{% load staticfiles %}
+<!-- Header -->
+{% block header %}
+{% include 'header.html' %}
+{% endblock %}
+<!-- Header -->
+
+<!-- Banner Slider -->
+{% block banner %}
+<div class="parallax-window section-padding overlay-pink" data-image-src="images/inner-banner.jpg" data-parallax="scroll">
+	<div class="container">
+
+		<!-- Page heading -->
+		<div class="page-heading">
+			<h2>Post Detail</h2>
+		</div>
+		<!-- Page heading -->
+
+		<!-- Breadcrumb -->
+		<div class="tc-bredcrum">
+			<ul>
+				<li><a href="/app/">Home</a></li>
+				<li><a href="/app/blog">Blog</a></li>
+			</ul>
+		</div>
+		<!-- Breadcrumb -->
+
+	</div>
+</div>	
+{% endblock %}
+<!-- Banner Slider -->
+
+<!-- Main Content -->
+{% block main %}
+<main class="main-content section-padding white-bg">
+		<div class="container">
+			<div class="row">
+				<!-- Blog Detail -->
+				<div class="col-lg-8 col-md-8 col-sm-7">
+					<div class="blog-detail">
+					
+						<!-- Blog Post -->
+						<div class="single-blog-post">
+
+							<!-- Post Img -->
+							<figure class="post-img">
+								<img src="{{ MEDIA_URL }}{{ post.post_image.url }}" width="200" height="250" alt="img-01">
+								<strong class="title-batch-left"><i class="fa fa-link"></i></strong>
+							</figure>
+							<!-- Post Img -->
+
+							<!-- Post Detail -->
+							<div class="blog-post-detail">
+								<div class="center-detail-inner">
+									<span class="admin-img-top"><img src="{% static 'images/admin-img/img-01.jpg' %}" alt="img-01"></span>
+									<h3>{{ post.title }}</h3>
+									<div>
+										<ul class="meta-post">
+											<li><i class="fa fa-user"></i>{{ post.author }}</li>
+											<li><i class="fa fa-clock-o"></i>{{ post.date }}</li>
+											<li><i class="fa fa-comment"></i>{{ post.comments.count }} Comments</li>
+										</ul>
+									</div>
+									<div>
+										<p>
+                                            {{ post.body | safe }}
+                                        </p>
+									</div>
+								</div>
+							</div>
+							<!-- Post Detail -->
+
+						</div>
+						<!-- Blog Post -->
+
+						<!-- Admin Detail or advert placements -->
+						<!--<div class="section-padding">
+							<div class="admin-detail">
+								<span class="admin-img"><img src="{% static 'images/admin-img/img-01.jpg' %}" alt="img-01"></span>
+								<p>advert placements</p>
+							</div>
+						</div>-->
+						<!-- Admin Detail or advert placement -->
+                        <hr>
+						<!-- Comments -->
+						<div class="comments-holder section-padding-bottom">
+							<div class="comment-heading">
+								<h2>Add Your <strong>Comments </strong></h2>
+                                <p><span><i class="fa fa-comment"></i> {{ post.comments.count }} </span> <strong>Comments</strong></p>
+							</div>
+							<!-- Comments List -->
+							<ul class="comment-list">
+                                {% for comment in post.comments.all %}
+                                    <li>
+                                        <span class="admin-img"><img src="{% static 'images/commenter-img/img-01.jpg' %}" alt="comment author"></span>
+                                        <div class="commenter-detail">
+                                            <div class="commenter-name">
+                                                <span>{{ comment.author }}</span>
+                                                <span>{{ comment.created_date }}</span>
+                                            </div>
+                                            <p>
+                                                {{ comment.text|linebreaks }}
+                                            </p>
+                                            <a class="xs-btn pink-btn" href="{% url 'view_blog_post' slug=post.slug %}#comment-form">reply</a>
+                                        </div>
+                                    </li>
+                                {% empty %}
+                                    <li>
+                                        <span class="admin-img"><img src="{% static 'images/commenter-img/img-01.jpg' %}" alt="default avatar"></span>
+                                        <div class="commenter-detail">
+                                            <h3>No comments here yet :( </h3>
+                                            <a class="xs-btn pink-btn" href="{% url 'view_blog_post' slug=post.slug %}#comment-form">comment</a>
+                                        </div>
+                                    </li>
+
+                                {% endfor %}
+							</ul>
+							<!-- Comments List -->
+						</div>
+						<!-- Comments -->
+						<!-- Comment Form -->
+						<div class="comment-form">
+							<form id="comment-form" class="comment-form" method="POST">
+                                {% csrf_token %}
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<input class="form-control" type="text" id="author" name="author" placeholder="Your Full Name" required>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<input class="form-control" type="email" id="email" name="email" placeholder="Your Email" required>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<textarea id="text" name="text" class="form-control" placeholder="Your Comment..." rows="4" required></textarea>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="form-btns">
+											<ul class="btn-list">
+												<li><button class="pink-btn" type="reset">Reset</button></li>
+												<li><button class="pink-btn" type="submit" onclick="submit()">Send</button></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- Comment Form -->
+					
+					</div>
+				</div>
+				<!-- Blog Detail -->
+
+				<!-- Aside -->
+				{% include 'aside.html' %}
+				<!-- Aside -->
+
+			</div>
+		</div>
+	</main>
+{% endblock %}
+<!-- Main Content -->

@@ -1,0 +1,232 @@
+{%extends 'base.html' %}
+{% load staticfiles %}
+<!-- Header -->
+{% block header %}
+{% include 'header.html' %}
+{% endblock %}
+<!-- Header -->
+
+<!-- Banner Slider -->
+{% block banner %}
+<div class="parallax-window section-padding overlay-gray" data-image-src="{% static 'images/inner-banner.jpg' %}" data-parallax="scroll">
+		<div class="container">
+
+			<!-- Page heading -->
+			<div class="page-heading">
+				<h2>Contact</h2>
+			</div>
+			<!-- Page heading -->
+
+			<!-- Bredrcum -->
+			<div class="tc-bredcrum">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li class="active">Contact</li>
+				</ul>
+			</div>
+			<!-- Bredrcum -->
+
+		</div>
+	</div>
+{% endblock %}
+<!-- Banner Slider -->
+
+<!-- Main Content -->
+{% block main %}
+<main class="main-content">
+
+		<!-- Map  -->
+		<div class="contact-map-holder">
+			<div id="contact-map" class="contact-map"></div>
+			<div class="map-overlay">
+				<div class="tc-display-table">
+					<div class="tc-display-table-cell">
+						<address>
+							<span class="tree-icon"><img src="{% static 'images/tree-icon.png' %}" alt="my home icon and office address"></span>
+							<span>121 King Street, Melbourne </span>
+							<span>VIC 3000, Nigeria</span>
+							<span>+61 3 8376 6284</span>
+						</address>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Map -->
+
+		<!-- Contact Figures -->
+		<div class="contact-figures section-padding-top">
+			<div class="container">
+				<div class="row">
+					
+					<!-- Contact Figure -->
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="contact-figure">
+							<h3>Location</h3>
+							<span class="contact-icon"><i class="fa fa-map-marker"></i></span>
+							<span>121 King Street, Melbourne</span>
+							<span>VIC 3000, Australia84</span>
+						</div>
+					</div>
+					<!-- Contact Figure -->
+
+					<!-- Contact Figure -->
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="contact-figure">
+							<h3>Phone &amp; Email</h3>
+							<span class="contact-icon"><i class="fa fa-phone"></i></span>
+							<span>+61 32376 6284</span>
+							<span>info@cygnalsystems.com</span>
+						</div>
+					</div>
+					<!-- Contact Figure -->
+
+					<!-- Contact Figure -->
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="contact-figure">
+							<h3>Call Hours</h3>
+							<span class="contact-icon"><i class="fa fa-clock-o"></i></span>
+							<span>MON - THU :  8:00 AM To 5:00 PM</span>
+							<span>FRI - SAT : 8:00 AM To 2:00 PM</span>
+						</div>
+					</div>
+					<!-- Contact Figure -->
+
+				</div>
+			</div>
+		</div>
+		<!-- Contact Figure -->
+
+		<!-- Contact Form -->
+		<section class="team-holder section-padding-top white-bg">
+			<div class="container">
+
+				<!-- Main Heading -->
+				<div class="main-heading-holder">
+					<div class="main-heading">
+						<h2>Send <strong>Your </strong> Message<span>i have your best interest at heart</span></h2>
+						<p>Do you want to design a hardware? do you need guidance? do you need materials?
+						<span>contact me and i will render you a qualitative service.</span></p>
+					</div>
+				</div>
+				<!-- Main Heading -->
+
+				<!-- Contact Form -->
+				<div class="commnet-form">
+					<div id="formalert" class="alert hide">  
+			          <a class="close">×</a>  
+			          <strong>Warning!</strong> Make sure all fields are filled and try again.
+			        </div>
+					<form role="form" id="contactForm" class="comment-form" method="POST" novalidate>{% csrf_token %}
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<input type="text" class="form-control" name="contact_name" id="contact_name" placeholder="Name" required />
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<input type="email" class="form-control" name="contact_email" id="contact_email" placeholder="Email" required />
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<div class="form-group">
+									<textarea name="content" id="content" cols="10" class="form-control" rows="10" placeholder="Your Message.." required /></textarea>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<div class="form-btns">
+									<ul class="btn-list">
+										<li><button class="pink-btn" type="reset">Reset</button></li>
+										<li><button type="submit" value="submit" class="pink-btn" id="btn_submit" onClick="submit();">Submit</button></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- Contact Form -->
+
+			</div>
+		</section>
+		<!-- Contact Form -->
+
+		<!-- Team Section -->
+		<!--<section class="team-holder section-padding-top white-bg">
+			<div class="container">
+
+				<!-- Main Heading --
+				<div class="main-heading-holder">
+					<div class="main-heading">
+						<h2>Contact <strong>our</strong> Team<span>our best services for your children</span></h2>
+						<p>Vivamus tempor felis at nulla dapibus cursus. Donec pretium nulla eu lobortis efficitur.
+						<span>Quisquefeugiat, orci investibulum porta, metus lacus molestie mauris.</span></p>
+					</div>
+				</div>
+				<!-- Main Heading --
+
+				<!-- Team Slider --
+				<div id="team-slider" class="team-slider">
+					
+					<!-- Team Figure --
+					<div class="item">
+						<figure class="team-figure">
+							<img src="images/teams/img-01.png" alt="img-01">
+							<figcaption class="employee-detail">
+								<div class="tc-display-table">
+									<div class="tc-display-table-cell">
+										<div class="employee-desination">
+											<h5><a href="#">brenda shon</a></h5>
+											<span>Director</span>
+										</div>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Team Figure --
+
+					<!-- Team Figure --
+					<div class="item">
+						<figure class="team-figure">
+							<img src="images/teams/img-02.png" alt="img-02">
+							<figcaption class="employee-detail">
+								<div class="tc-display-table">
+									<div class="tc-display-table-cell">
+										<div class="employee-desination">
+											<h5><a href="#">brenda shon</a></h5>
+											<span>Director</span>
+										</div>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Team Figure --
+
+					<!-- Team Figure --
+					<div class="item">
+						<figure class="team-figure">
+							<img src="images/teams/img-03.png" alt="img-03">
+							<figcaption class="employee-detail">
+								<div class="tc-display-table">
+									<div class="tc-display-table-cell">
+										<div class="employee-desination">
+											<h5><a href="#">brenda shon</a></h5>
+											<span>Director</span>
+										</div>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+					<!-- Team Figure --
+
+				</div>
+				<!-- Team Slider --
+			</div>
+		</section>-->
+		<!-- Team Section -->
+
+	</main>
+{% endblock %}
+<!-- Main Content -->

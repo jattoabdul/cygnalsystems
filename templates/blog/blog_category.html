@@ -1,0 +1,164 @@
+{%extends 'base.html' %}
+{% load staticfiles %}
+<!-- Header -->
+{% block header %}
+{% include 'header.html' %}
+{% endblock %}
+<!-- Header -->
+
+<!-- Banner Slider -->
+{% block banner %}
+<div class="parallax-window section-padding overlay-pink" data-image-src="images/inner-banner.jpg" data-parallax="scroll">
+	<div class="container">
+
+		<!-- Page heading -->
+		<div class="page-heading">
+			<h2>{{ category.title }} Blog Category</h2>
+		</div>
+		<!-- Page heading -->
+
+		<!-- Breadrcum -->
+		<div class="tc-bredcrum">
+			<ul>
+				<li><a href="/app/home/">Home</a></li>
+				<li class="active"><a href="/app/blog/">Blog</a></li>
+			</ul>
+		</div>
+		<!-- Breadrcum -->
+
+	</div>
+</div>
+{% endblock %}
+<!-- Banner Slider -->
+
+<!-- Main Content -->
+{% block main %}
+<main class="main-content section-padding white-bg">
+	<div class="container">
+		<div class="row">
+			<!-- Blog Full with sidebar -->
+			<div class="col-lg-8 col-md-7 col-sm-6">
+				<div class="Blog-full-width">
+					<!-- loop through for each Blogs Img Post item -->
+                    {% if posts %}
+                        {% for post in posts %}
+                            {% if post.published == True %}
+					            <div class="full-width-post-holder">
+                                    <div class="row">
+                                        <!-- Post Img -->
+                                        <div class="col-sm-12">
+                                            <figure class="post-img">
+                                                <a href="{{ post.get_absolute_url }}">
+                                                    <img src="{{ MEDIA_URL }}{{ post.post_image.url }}" width="200" height="250" alt="{{ post.title }}">
+                                                </a>
+                                                <strong class="title-batch-left"><i class="fa fa-image"></i></strong>
+                                            </figure>
+                                        </div>
+                                        <!-- Post Img -->
+                                        <!-- Post Detail -->
+                                        <div class="col-sm-12">
+                                            <div class="blog-post-detail">
+                                                <div class="center-detail-inner">
+                                                    <h3>{{ post.title }}</h3>
+                                                    <div>
+                                                        <ul class="meta-post">
+                                                            <li><i class="fa fa-user"></i>{{ post.author }}</li>
+                                                            <li><i class="fa fa-clock-o"></i>{{ post.date }}</li>
+                                                            <li><i class="fa fa-clock-o"></i>{{ post.category }}</li>
+                                                            <li>
+                                                                <a href="{% url 'view_blog_post' slug=post.slug %}">
+                                                                    <i class="fa fa-comment"></i>{{ post.comments.count }}
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p>
+                                                        {{ post.meta_description }}
+                                                    </p>
+                                                    <a class="pink-btn" href="{{ post.get_absolute_url }}">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Post Detail -->
+                                    </div>
+					            </div>
+                             {% endif %}
+                        {% endfor %}
+                        <!-- add pagination in between here-->
+                        <!-- Pagination -->
+                        <div class="col-sm-12">
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    {% if posts.has_previous %}
+                                        <li><a href="?page={{ posts.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+                                    {% endif %}
+
+                                    {% for i in posts.paginator.page_range %}
+                                        {% if posts.number == i %}
+                                            <li class="active"><a href="#">{{ i }}</a></li>
+                                        {% else %}
+                                            <li ><a href="?page={{ i }}">{{ i }}</a></li>
+                                        {% endif %}
+                                    {% endfor %}
+
+                                    {% if posts.has_next %}
+                                        <li><a href="?page={{ posts.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Pagination -->
+                        <!-- end pagination -->
+                    {% else %}
+                        <!-- default no post item -->
+                        <div class="full-width-post-holder">
+						<div class="row">
+
+							<!-- Post Img -->
+							<div class="col-sm-12">
+								<figure class="post-img">
+									<img src="{% static 'images/blog-with-sidebar/img-01.jpg' %}" alt="img-01">
+									<strong class="title-batch-left"><i class="fa fa-image"></i></strong>
+								</figure>
+							</div>
+							<!-- Post Img -->
+
+							<!-- Post Detail -->
+							<div class="col-sm-12">
+								<div class="blog-post-detail">
+									<div class="center-detail-inner">
+										<h3>No Post Currently (Default Post)</h3>
+										<div>
+											<ul class="meta-post">
+												<li><i class="fa fa-user"></i>Author</li>
+												<li><i class="fa fa-clock-o"></i>some days to come</li>
+												<li><i class="fa fa-comment"></i>No Post to Comments on</li>
+											</ul>
+										</div>
+										<p>
+                                            No post currently, please check back later as the admins are taking there time to write good tutorials
+                                            <span> for you.</span> thank you for ur patience
+                                        </p>
+										<a class="pink-btn" href="/app/blog/">reload</a>
+									</div>
+								</div>
+							</div>
+							<!-- Post Detail -->
+
+						</div>
+					</div>
+                        <!--end default blog post no item-->
+                    {% endif %}
+					<!-- end of each blog post -->
+				</div>
+			</div>
+			<!-- Blog Full with sidebar -->
+
+			<!-- Aside -->
+			{% include 'aside.html' %}
+			<!-- Aside -->
+		</div>
+	</div>
+</main>
+{% endblock %}
+<!-- Main Content -->
